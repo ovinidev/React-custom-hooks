@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-type ModalContextData = {
+type ModalProps = {
   toggleModalSubmitReject: () => void;
   modalRejectOpen: boolean;
   toggleModalSubmitApproved: () => void;
@@ -9,7 +9,7 @@ type ModalContextData = {
   modalImageOpen: boolean;
 }
 
-export const useModal = (): ModalContextData => {
+export const useModal = (): ModalProps => {
   const [modalRejectOpen, setModalRejectOpen] = useState(false);
 
   const toggleModalSubmitReject = () => {
