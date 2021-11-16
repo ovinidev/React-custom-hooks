@@ -1,5 +1,5 @@
 export default function Buttons() {
   return (
-    <h1>ioi</h1>
+    <h1>oi</h1>
   )
 }
