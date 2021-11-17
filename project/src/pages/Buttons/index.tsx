@@ -36,7 +36,7 @@ export default function Buttons() {
 
       <Modal
         marginVertical={"300px"}
-        marginHorizontal={"400px"}
+        marginHorizontal={"40px"}
         background={"#A16BDD"}
         modalOpen={modalOpen}
       >

@@ -33,8 +33,8 @@ export default function ImagesGallery() {
       </Grid>
 
       <Modal
-        marginVertical={"300px"}
-        marginHorizontal={"400px"}
+        marginVertical={"200px"}
+        marginHorizontal={"50px"}
         background={"#A16BDD"}
         modalOpen={modalOpen}
       >
