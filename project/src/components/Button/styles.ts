@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.button`
-  height: 4rem;
-  width: 12rem;
-  margin: 2rem 0;
+  height: 5rem;
+  width: 14rem;
 
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   color: #ffffff;
-  font-size: 1.8rem;
-  background-color: #260342;
+  font-size: 2.2rem;
+  background-color: color;
 
   display: flex;
   align-items: center;

@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { BrowserRouter as Router, Link } from 'react-router-dom'
-import Routes from './routes'
+import MainRoutes from './routes'
+
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
         <Link to="gallery">Gallery</Link>
       </Header>
 
-      <Routes />
+      <MainRoutes />
+
     </Router>
   );
 }

@@ -1,11 +1,13 @@
 import { Photo } from '../../components/Photo';
 import { Container, Grid } from './styles';
+import { Modal } from "../../components/Modal";
+import { Button } from "../../components/Button";
 
 export default function ImagesGallery() {
 
   return (
     <Container>
-      <h1>Galeria DE IMAGENS</h1>
+      <h1>Teste as imagens</h1>
 
       <Grid>
         <Photo url={"https://cdn.folhape.com.br/img/pc/1100/1/dn_arquivo/2021/10/000-9pz83w.jpg"} />
@@ -15,6 +17,16 @@ export default function ImagesGallery() {
         <Photo url={"https://eu-images.contentstack.com/v3/assets/bltcc7a7ffd2fbf71f5/blt75ce76a9db0cc610/60dc07df5543520fcbc3c25c/f93c6725435df589a5df04fad3da301c3762536d.jpg?auto=webp&fit=crop&format=jpg&quality=100"} />
         <Photo url={"https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2021/05/barcelona_messi.jpg"} />
       </Grid>
+
+      <Modal
+        marginVertical={"300px"}
+        marginHorizontal={"200px"}
+        background={"#A16BDD"}
+      >
+        <h1>oiiii</h1>
+        <p>oiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiii</p>
+        <Button text={"Teste"} color={"red"}/>
+      </Modal>
     </Container>
   );
 };

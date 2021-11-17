@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.nav`
+export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,9 +13,10 @@ export const Container = styled.nav`
     font-size: 3rem;
     margin-bottom: 5rem;
   }
+  
 `;
 
-export const Grid = styled.nav`
+export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;

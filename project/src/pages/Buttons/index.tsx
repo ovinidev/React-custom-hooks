@@ -1,18 +1,16 @@
 import { Button } from '../../components/Button';
-import { Container } from './styles';
+import { Container, Content } from './styles';
 
 export default function Buttons() {
 
   return (
     <Container>
-      <h1>TELA DE BOTÕES</h1>
+      <h1>Teste os botões</h1>
 
-      <div>
-        <Button text={"Teste"} />
-        <Button text={"Teste"} />
-        <Button text={"Teste"} />
-        <Button text={"Teste"} />
-      </div>
+      <Content>
+        <Button text={"Sucesso"} color={"#25B653"}/>
+        <Button text={"Falha"} color={"#C31B1B"}/>
+      </Content>
     </Container>
   );
 };

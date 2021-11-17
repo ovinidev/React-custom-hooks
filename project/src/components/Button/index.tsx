@@ -1,13 +1,14 @@
 import { Container } from './styles';
 
 type Props = {
-  text: string;
+  text?: string;
   onClick?: () => void;
+  color?: string;
 }
 
-export const Button = ({ text, onClick }: Props) => {
+export const Button = ({ text, onClick, color }: Props) => {
   return (
-    <Container onClick={onClick}>
+    <Container onClick={onClick} style={{ background: color}}>
       {text}
     </Container>
   );
