@@ -29,16 +29,15 @@ export default function ImagesGallery() {
         <Photo onClick={() => openModal(Messi2)} url={Messi2} />
         <Photo onClick={() => openModal(Messi)} url={Messi} />
         <Photo onClick={() => openModal(Messi2)} url={Messi2} />
-
       </Grid>
 
       <Modal
-        marginVertical={"200px"}
-        marginHorizontal={"50px"}
+        height= {"60%"}
+        width= {"80%"}
         background={"#A16BDD"}
         modalOpen={modalOpen}
       >
-        <img src={urlModal} />
+        <Photo url={urlModal}/>
         
         <Button
           text={"Teste"}

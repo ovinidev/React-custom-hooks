@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
 
   background: #E3E6F5;
@@ -11,7 +11,6 @@ export const Container = styled.div`
 
   h1 {
     font-size: 3rem;
-    margin-bottom: 5rem;
   }
   
 `;
@@ -19,5 +18,9 @@ export const Container = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 10px;
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `

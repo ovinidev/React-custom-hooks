@@ -1,28 +1,28 @@
 import { ReactNode } from 'react';
-import { Container} from './styles';
+import { Container } from './styles';
 
 type Props = {
-  marginVertical: string;
-  marginHorizontal: string;
+  height: string;
+  width: string;
   background: string;
   children?: ReactNode;
   modalOpen: boolean;
 }
 
 export const Modal = (
-  { marginVertical,
-    marginHorizontal,
+  {
+    height,
+    width,
     background,
     children,
-    modalOpen
+    modalOpen,
   }: Props) => {
+
 
   return (
     <Container style={{
-      top: marginVertical,
-      left: marginHorizontal,
-      right: marginHorizontal,
-      bottom: marginVertical,
+      height: height,
+      width: width,
       background: background,
       display: modalOpen ? '' : 'none'
     }}>

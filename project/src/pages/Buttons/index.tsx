@@ -1,20 +1,10 @@
-import { useState } from 'react';
 import { Button } from '../../components/Button';
 import { Modal } from '../../components/Modal';
+import { useModal } from '../../hooks/useModal';
 import { Container, Content } from './styles';
 
 export default function Buttons() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [textModal, setTextModal] = useState("");
-
-  const openModal = (msg: string) => {
-    setModalOpen(true);
-    setTextModal(msg);
-  }
-
-  const closeModal = () => {
-    setModalOpen(false);
-  }
+  const { openModal, closeModal, modalOpen, textModal } = useModal();
 
   return (
     <Container>
@@ -24,19 +14,19 @@ export default function Buttons() {
         <Button
           text={"Sucesso"}
           color={"#25B653"}
-          onClick={() => openModal("teste de sucesso")}
+          onClick={() => openModal("Teste de sucesso")}
         />
 
         <Button
           text={"Falha"}
           color={"#C31B1B"}
-          onClick={() => openModal("teste de falha")}
+          onClick={() => openModal("Teste de falha")}
         />
       </Content>
 
       <Modal
-        marginVertical={"300px"}
-        marginHorizontal={"40px"}
+        height={"40%"}
+        width={"60%"}
         background={"#A16BDD"}
         modalOpen={modalOpen}
       >

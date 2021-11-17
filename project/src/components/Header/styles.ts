@@ -18,8 +18,18 @@ export const Container = styled.nav`
   img {
     width: 35px;
   }
+
+  @media (max-width: 400px) {
+    a {
+    font-size: 1.8rem;
+  }
+  }
 `;
 
 export const Nav = styled.nav`
   margin-right: 10rem;
+
+  @media (max-width: 400px) {
+    margin-right: 0;
+  }
 `;
