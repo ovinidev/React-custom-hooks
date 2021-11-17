@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Container } from './styles';
+import { Container, Nav } from './styles';
 
 type Props = {
   children: ReactNode;
@@ -8,7 +8,9 @@ type Props = {
 export const Header = ({children}: Props) => {
   return (
     <Container>
+      <Nav>
       {children}
+      </Nav>
     </Container>
   );
 };

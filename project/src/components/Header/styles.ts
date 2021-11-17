@@ -8,9 +8,14 @@ export const Container = styled.nav`
   justify-content: flex-end;
 
   a {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     color: #ffffff;
     display: inline-block;
     margin: 0 1rem;
+    text-decoration: none;
   }
+`;
+
+export const Nav = styled.nav`
+  margin-right: 10rem;
 `;
