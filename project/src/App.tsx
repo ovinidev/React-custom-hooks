@@ -10,6 +10,7 @@ function App() {
       <Header>
         <Link to="/">Buttons</Link>
         <Link to="gallery">Gallery</Link>
+        <Link to="storage">Storage</Link>
       </Header>
 
       <MainRoutes />
