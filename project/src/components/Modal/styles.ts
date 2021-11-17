@@ -9,4 +9,9 @@ export const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 
+	img {
+		width: 350px;
+		margin-bottom: 2rem;
+	}
+
 `;
