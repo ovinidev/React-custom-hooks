@@ -10,7 +10,7 @@ export const Container = styled.div`
   height: 92vh;
 
   h1 {
-    font-size: 3rem;
+    font-size: 30px;
   }
   
 `;

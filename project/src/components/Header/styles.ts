@@ -8,7 +8,7 @@ export const Container = styled.nav`
   justify-content: space-around;
 
   a {
-    font-size: 2.2rem;
+    font-size: 22px;
     color: #ffffff;
     display: inline-block;
     margin: 0 1rem;
@@ -21,13 +21,13 @@ export const Container = styled.nav`
 
   @media (max-width: 400px) {
     a {
-    font-size: 1.8rem;
+    font-size: 18px;
   }
   }
 `;
 
 export const Nav = styled.nav`
-  margin-right: 10rem;
+  margin-right: 100px;
 
   @media (max-width: 400px) {
     margin-right: 0;

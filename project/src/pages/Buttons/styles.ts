@@ -10,18 +10,18 @@ export const Container = styled.div`
   height: 92vh;
 
   h1 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
+    font-size: 30px;
+    margin-bottom: 30px;
   }
 
   p {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 `;
 
 export const Content = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 20px;
 `;
