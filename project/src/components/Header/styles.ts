@@ -5,7 +5,7 @@ export const Container = styled.nav`
   background-color: #260342;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-around;
 
   a {
     font-size: 2.2rem;
@@ -13,6 +13,10 @@ export const Container = styled.nav`
     display: inline-block;
     margin: 0 1rem;
     text-decoration: none;
+  }
+
+  img {
+    width: 35px;
   }
 `;
 

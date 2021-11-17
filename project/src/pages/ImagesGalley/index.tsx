@@ -2,9 +2,11 @@ import { Photo } from '../../components/Photo';
 import { Container, Grid } from './styles';
 import { Modal } from "../../components/Modal";
 import { Button } from "../../components/Button";
+import { useState } from 'react';
 
 export default function ImagesGallery() {
-
+  const [modalOpen, setModalOpen] = useState(false);
+  
   return (
     <Container>
       <h1>Teste as imagens</h1>
@@ -20,12 +22,17 @@ export default function ImagesGallery() {
 
       <Modal
         marginVertical={"300px"}
-        marginHorizontal={"200px"}
+        marginHorizontal={"400px"}
         background={"#A16BDD"}
+        modalOpen={modalOpen}
       >
-        <h1>oiiii</h1>
-        <p>oiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiiioiiii</p>
-        <Button text={"Teste"} color={"red"}/>
+        <h1>Texto de Modal</h1>
+        <p>Alguma descrição qualquer a respeito do assunto</p>
+        <Button
+          text={"Teste"}
+          color={"red"}
+          onClick={() => setModalOpen(false)}
+        />
       </Modal>
     </Container>
   );

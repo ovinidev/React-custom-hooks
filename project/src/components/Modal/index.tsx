@@ -6,6 +6,7 @@ type Props = {
   marginHorizontal: string;
   background: string;
   children?: ReactNode;
+  modalOpen: boolean;
 }
 
 export const Modal = (
@@ -13,6 +14,7 @@ export const Modal = (
     marginHorizontal,
     background,
     children,
+    modalOpen
   }: Props) => {
 
   return (
@@ -22,6 +24,7 @@ export const Modal = (
       right: marginHorizontal,
       bottom: marginVertical,
       background: background,
+      display: modalOpen ? '' : 'none'
     }}>
       {children}
     </Container>

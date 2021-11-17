@@ -14,6 +14,10 @@ export const Container = styled.div`
     margin-bottom: 3rem;
   }
 
+  p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const Content = styled.div`
