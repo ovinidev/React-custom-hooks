@@ -1,5 +1,5 @@
-## Template para projetos React
-### **Fiz esse template para facilitar projetos futuros, para não perder tempo configurando.**
+## Área de testes para modais
+### **Fizemos esse projeto com a intenção de automatizar modais e facilitar o uso deles.**
 
 ### 🚀 Como executar
 ```
@@ -9,6 +9,3 @@
 ```
   
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
-
-**OBS: O Eslint está com a rules necessárias para funcionar de forma efetiva!**
-
