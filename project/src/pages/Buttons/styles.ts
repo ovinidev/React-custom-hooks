@@ -12,11 +12,13 @@ export const Container = styled.div`
   h1 {
     font-size: 30px;
     margin-bottom: 30px;
+    max-width: 80%;
   }
 
   p {
     font-size: 20px;
     margin-bottom: 20px;
+    max-width: 80%;
   }
 `;
 

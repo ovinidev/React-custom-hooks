@@ -10,17 +10,24 @@ import Messi from '../../assets/messi.jpg';
 import Messi2 from '../../assets/messi2.jpg';
 
 export default function ImagesGallery() {
-  const {openModal, closeModal, modalOpen, textModal} = useModal();
+  const {
+    openModal, closeModal, modalOpen, textModal, messageModal,
+  } = useModal();
+
+  const handleModal = (url: string) => {
+    openModal();
+    messageModal(url);
+  };
 
   return (
     <Container>
       <h1>Teste as imagens</h1>
 
       <Grid>
-        <Photo onClick={() => openModal(Messi)} url={Messi} />
-        <Photo onClick={() => openModal(Messi2)} url={Messi2} />
-        <Photo onClick={() => openModal(Messi)} url={Messi} />
-        <Photo onClick={() => openModal(Messi2)} url={Messi2} />
+        <Photo onClick={() => handleModal(Messi)} url={Messi} />
+        <Photo onClick={() => handleModal(Messi2)} url={Messi2} />
+        <Photo onClick={() => handleModal(Messi)} url={Messi} />
+        <Photo onClick={() => handleModal(Messi2)} url={Messi2} />
       </Grid>
 
       <Modal

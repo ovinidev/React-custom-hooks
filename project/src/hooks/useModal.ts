@@ -3,7 +3,8 @@ import {useState} from 'react';
 type modalProps = {
   modalOpen: boolean;
   textModal: string;
-  openModal: (msg: string) => void;
+  openModal: () => void;
+  messageModal: (msg: string) => void;
   closeModal: () => void;
 }
 
@@ -11,14 +12,17 @@ export const useModal = (): modalProps => {
   const [modalOpen, setModalOpen] = useState(false);
   const [textModal, setTextModal] = useState('');
 
-  const openModal = (msg: string) => {
-    setModalOpen(true);
+  const messageModal = (msg: string) => {
     setTextModal(msg);
+  };
+
+  const openModal = () => {
+    setModalOpen(true);
   };
 
   const closeModal = () => {
     setModalOpen(false);
   };
 
-  return {modalOpen, textModal, openModal, closeModal};
+  return {modalOpen, messageModal, textModal, openModal, closeModal};
 };
