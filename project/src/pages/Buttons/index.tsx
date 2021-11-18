@@ -27,9 +27,7 @@ export default function Buttons() {
       <Modal
         height={"450px"}
         width={"60%"}
-        heightMobile={"350px"}
-        widthMobile={"75%"}
-        background={"#A16BDD"}
+        background={"#7e649b"}
         modalOpen={modalOpen}
       >
         <h1>{textModal}</h1>
