@@ -4,8 +4,12 @@ import { useModal } from '../../hooks/useModal';
 import { Container, Content } from './styles';
 
 export default function Buttons() {
-  const { openModal, closeModal, modalOpen, textModal } = useModal();
-
+  const { openModal, closeModal, modalOpen, textModal, messageModal } = useModal();
+  
+  const handleModal = (url: string) => {
+    openModal();
+    messageModal(url);
+  }
   return (
     <Container>
       <h1>Teste os botões</h1>
@@ -14,19 +18,19 @@ export default function Buttons() {
         <Button
           text={"Sucesso"}
           color={"#25B653"}
-          onClick={() => openModal("Teste de sucesso")}
+          onClick={() => handleModal("O seu modal foi feito com sucesso!")}
         />
 
         <Button
           text={"Falha"}
           color={"#C31B1B"}
-          onClick={() => openModal("Teste de falha")}
+          onClick={() => handleModal("O seu modal foi feito com falhas!")}
         />
       </Content>
 
       <Modal
-        height={"450px"}
-        width={"60%"}
+        height={"500px"}
+        width={"400px"}
         background={"#7e649b"}
         modalOpen={modalOpen}
       >
