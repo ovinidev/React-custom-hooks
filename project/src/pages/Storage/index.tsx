@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
+import { Modal } from '../../components/Modal';
+import { useModal } from '../../hooks/useModal';
 import { useStorage, getKeyValue } from '../../hooks/useStorage';
 
 import { Container, Content } from './styles';
@@ -12,6 +14,8 @@ export default function Storage() {
   const [removeKey, setRemoveKey] = useState<string>('');
   const { getAllKeys, multiGet, setItem, removeItem, clear } = useStorage();
 
+  const { openModal, closeModal, modalOpen, textModal, messageModal } = useModal();
+
   function refreshKeys() {
     const keys = getAllKeys();
     setPairs(multiGet(keys))
@@ -22,8 +26,13 @@ export default function Storage() {
   }, [])
 
   function addItem(key: string | undefined, value: any) {
-    if (!key) alert('Digite uma chave válida')
+    if (!key) {
+      messageModal('Digite uma chave válida.');
+      openModal();
+    }
     else {
+      messageModal('Chave adicionada!')
+      openModal();
       setItem(key, value);
       setAddValue('');
       setAddKey('');
@@ -32,8 +41,13 @@ export default function Storage() {
   }
 
   function deleteItem(key: string | undefined) {
-    if (!key) alert('Digite uma chave válida')
+    if (!key) {
+      messageModal('Digite uma chave válida.')
+      openModal();
+    }
     else {
+      messageModal('Chave deletada!')
+      openModal();
       removeItem(key);
       setRemoveKey('');
       refreshKeys();
@@ -41,6 +55,8 @@ export default function Storage() {
   }
 
   function clearAll() {
+    messageModal('Storage limpo!')
+    openModal();
     clear();
     refreshKeys();
   }
@@ -101,9 +117,21 @@ export default function Storage() {
           color="#FF6D6D"
           onClick={() => deleteItem(removeKey)}
         />
-
       </Content>
 
+      <Modal
+        height={"500px"}
+        width={"400px"}
+        background={"#FBF3E4"}
+        modalOpen={modalOpen}
+      >
+        <p>{textModal}</p>
+        <Button
+          text={"OK"}
+          color={"#7e649b"}
+          onClick={closeModal}
+        />
+      </Modal>
     </Container>
   );
 };
