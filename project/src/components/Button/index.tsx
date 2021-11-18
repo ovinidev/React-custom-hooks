@@ -1,5 +1,5 @@
-import { ButtonHTMLAttributes } from 'react';
-import { Container } from './styles';
+import {ButtonHTMLAttributes} from 'react';
+import {Container} from './styles';
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   text?: string;
@@ -7,9 +7,9 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   color?: string;
 }
 
-export const Button = ({ text, onClick, color }: Props) => {
+export const Button = ({text, onClick, color}: Props) => {
   return (
-    <Container onClick={onClick} style={{ background: color }}>
+    <Container onClick={onClick} style={{background: color}}>
       {text}
     </Container>
   );

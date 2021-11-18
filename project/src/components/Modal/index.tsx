@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
-import { useWindowDimensions } from '../../hooks/useWindowDimensions';
-import { Container } from './styles';
+import {ReactNode} from 'react';
+import {Container} from './styles';
 
 type Props = {
   height: string;
@@ -11,22 +10,20 @@ type Props = {
 }
 
 export const Modal = (
-  {
-    height,
-    width,
-    background,
-    children,
-    modalOpen,
-  }: Props) => {
-
+    {
+      height,
+      width,
+      background,
+      children,
+      modalOpen,
+    }: Props) => {
   return (
     <Container
       height={height}
       width={width}
       background={background}
-      style={{ display: modalOpen ? '' : 'none' }}>
+      style={{display: modalOpen ? '' : 'none'}}>
       {children}
     </Container>
   );
-
 };

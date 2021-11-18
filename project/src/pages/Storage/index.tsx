@@ -1,28 +1,28 @@
-import { useEffect, useState } from 'react';
-import { Button } from '../../components/Button';
-import { Input } from '../../components/Input';
-import { useStorage, getKeyValue } from '../../hooks/useStorage';
+import {useEffect, useState} from 'react';
+import {Button} from '../../components/Button';
+import {Input} from '../../components/Input';
+import {useStorage, getKeyValue} from '../../hooks/useStorage';
 
-import { Container, Content } from './styles';
+import {Container, Content} from './styles';
 
 export default function Storage() {
   const [pairs, setPairs] = useState<getKeyValue[]>();
   const [addKey, setAddKey] = useState<string>('');
   const [addValue, setAddValue] = useState<string>('');
   const [removeKey, setRemoveKey] = useState<string>('');
-  const { getAllKeys, multiGet, setItem, removeItem, clear } = useStorage();
+  const {getAllKeys, multiGet, setItem, removeItem, clear} = useStorage();
 
   function refreshKeys() {
     const keys = getAllKeys();
-    setPairs(multiGet(keys))
+    setPairs(multiGet(keys));
   }
 
   useEffect(() => {
     refreshKeys();
-  }, [])
+  }, []);
 
   function addItem(key: string | undefined, value: any) {
-    if (!key) alert('Digite uma chave válida')
+    if (!key) alert('Digite uma chave válida');
     else {
       setItem(key, value);
       setAddValue('');
@@ -32,7 +32,7 @@ export default function Storage() {
   }
 
   function deleteItem(key: string | undefined) {
-    if (!key) alert('Digite uma chave válida')
+    if (!key) alert('Digite uma chave válida');
     else {
       removeItem(key);
       setRemoveKey('');
@@ -50,10 +50,12 @@ export default function Storage() {
 
       <h1>Storage atual</h1>
 
-      {pairs && pairs.map(pair => {
+      {pairs && pairs.map((pair) => {
         return (
-          <p key={pair[0]}><strong key={`s${pair[0]}`}>{pair[0]}</strong>: {pair[1]}</p>
-        )
+          <p key={pair[0]}>
+            <strong key={`s${pair[0]}`}>{pair[0]}</strong>: {pair[1]}
+          </p>
+        );
       })}
       <br />
       <Button
@@ -71,12 +73,12 @@ export default function Storage() {
           type="text"
           value={addKey}
           placeholder="Chave"
-          onChange={e => setAddKey(e.target.value)} />
+          onChange={(e) => setAddKey(e.target.value)} />
         <Input
           type="text"
           value={addValue}
           placeholder="Valor"
-          onChange={e => setAddValue(e.target.value)} />
+          onChange={(e) => setAddValue(e.target.value)} />
 
         <Button
           text="Adicionar"
@@ -93,7 +95,7 @@ export default function Storage() {
           type="text"
           placeholder="Chave"
           value={removeKey}
-          onChange={e => setRemoveKey(e.target.value)}
+          onChange={(e) => setRemoveKey(e.target.value)}
         />
 
         <Button

@@ -1,16 +1,16 @@
-import { Photo } from '../../components/Photo';
-import { Modal } from "../../components/Modal";
-import { Button } from "../../components/Button";
+import {Photo} from '../../components/Photo';
+import {Modal} from '../../components/Modal';
+import {Button} from '../../components/Button';
 
-import { Container, Grid } from './styles';
+import {Container, Grid} from './styles';
 
-import { useModal } from '../../hooks/useModal';
+import {useModal} from '../../hooks/useModal';
 
-import Messi from '../../assets/messi.jpg'
-import Messi2 from '../../assets/messi2.jpg'
+import Messi from '../../assets/messi.jpg';
+import Messi2 from '../../assets/messi2.jpg';
 
 export default function ImagesGallery() {
-  const { openModal, closeModal, modalOpen, textModal } = useModal();
+  const {openModal, closeModal, modalOpen, textModal} = useModal();
 
   return (
     <Container>
@@ -24,16 +24,16 @@ export default function ImagesGallery() {
       </Grid>
 
       <Modal
-        height= {"60%"}
-        width= {"80%"}
-        background={"#A16BDD"}
+        height= {'60%'}
+        width= {'80%'}
+        background={'#A16BDD'}
         modalOpen={modalOpen}
       >
         <Photo url={textModal}/>
-        
+
         <Button
-          text={"Teste"}
-          color={"red"}
+          text={'Teste'}
+          color={'red'}
           onClick={closeModal}
         />
       </Modal>

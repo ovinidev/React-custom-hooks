@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from 'react';
 
 type modalProps = {
   modalOpen: boolean;
@@ -9,17 +9,16 @@ type modalProps = {
 
 export const useModal = (): modalProps => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [textModal, setTextModal] = useState("");
+  const [textModal, setTextModal] = useState('');
 
   const openModal = (msg: string) => {
     setModalOpen(true);
     setTextModal(msg);
-  }
+  };
 
   const closeModal = () => {
     setModalOpen(false);
-  }
+  };
 
-  return {modalOpen, textModal, openModal, closeModal}
-
-}
+  return {modalOpen, textModal, openModal, closeModal};
+};

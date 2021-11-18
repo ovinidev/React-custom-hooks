@@ -1,11 +1,11 @@
 import {
   Routes,
-  Route
-} from 'react-router-dom'
+  Route,
+} from 'react-router-dom';
 
-import Buttons from './pages/Buttons'
-import ImagesGallery from './pages/ImagesGalley'
-import Storage from './pages/Storage'
+import Buttons from './pages/Buttons';
+import ImagesGallery from './pages/ImagesGalley';
+import Storage from './pages/Storage';
 
 export default function MainRoutes() {
   return (
@@ -14,5 +14,5 @@ export default function MainRoutes() {
       <Route path="/gallery" element={<ImagesGallery />} />
       <Route path="/storage" element={<Storage />} />
     </Routes>
-  )
+  );
 }
