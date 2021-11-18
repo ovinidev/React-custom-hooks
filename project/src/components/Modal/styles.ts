@@ -1,14 +1,14 @@
 import { HTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
 
-interface props extends HTMLAttributes<HTMLDivElement> {
+interface Props extends HTMLAttributes<HTMLDivElement> {
 	height: string;
 	width: string;
 	background: string;
 	modalOpen: boolean;
 }
 
-export const Container = styled.div<props>`
+export const Container = styled.div<Props>`
 	${({ height, width, background, modalOpen }) => css`
 		height: ${height};
 		width: ${width};
