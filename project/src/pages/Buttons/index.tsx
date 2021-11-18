@@ -5,7 +5,7 @@ import { Container, Content } from './styles';
 
 export default function Buttons() {
   const { openModal, closeModal, modalOpen, textModal, messageModal } = useModal();
-  
+
   const handleModal = (url: string) => {
     openModal();
     messageModal(url);
