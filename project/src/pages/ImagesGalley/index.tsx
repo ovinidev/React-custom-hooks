@@ -1,24 +1,16 @@
 import { Photo } from '../../components/Photo';
-import { Container, Grid } from './styles';
 import { Modal } from "../../components/Modal";
 import { Button } from "../../components/Button";
-import { useState } from 'react';
+
+import { Container, Grid } from './styles';
+
+import { useModal } from '../../hooks/useModal';
 
 import Messi from '../../assets/messi.jpg'
 import Messi2 from '../../assets/messi2.jpg'
 
 export default function ImagesGallery() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [urlModal, setUrlModal] = useState("");
-
-  const openModal = (url: string) => {
-    setModalOpen(true);
-    setUrlModal(url);
-  }
-
-  const closeModal = () => {
-    setModalOpen(false);
-  }
+  const { openModal, closeModal, modalOpen, textModal } = useModal();
 
   return (
     <Container>
@@ -37,7 +29,7 @@ export default function ImagesGallery() {
         background={"#A16BDD"}
         modalOpen={modalOpen}
       >
-        <Photo url={urlModal}/>
+        <Photo url={textModal}/>
         
         <Button
           text={"Teste"}

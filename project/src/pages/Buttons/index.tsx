@@ -25,8 +25,10 @@ export default function Buttons() {
       </Content>
 
       <Modal
-        height={"40%"}
+        height={"450px"}
         width={"60%"}
+        heightMobile={"350px"}
+        widthMobile={"75%"}
         background={"#A16BDD"}
         modalOpen={modalOpen}
       >
