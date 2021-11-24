@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Header>
-        <Link to="buttons">Buttons</Link>
+        <Link to="">Buttons</Link>
         <Link to="gallery">Gallery</Link>
         <Link to="storage">Storage</Link>
       </Header>
