@@ -10,7 +10,7 @@ import Storage from './pages/Storage'
 export default function MainRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Buttons />} />
+      <Route path="/buttons" element={<Buttons />} />
       <Route path="/gallery" element={<ImagesGallery />} />
       <Route path="/storage" element={<Storage />} />
     </Routes>
