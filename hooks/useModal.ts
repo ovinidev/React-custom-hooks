@@ -1,39 +1,43 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-type ModalProps = {
-  toggleModalSubmitReject: () => void;
-  modalRejectOpen: boolean;
-  toggleModalSubmitApproved: () => void;
-  modalApprovedOpen: boolean;
-  toggleModalImage: () => void;
-  modalImageOpen: boolean;
+/* The interface containing all state and function types. */
+type modalProps = {
+  modalOpen: boolean;
+  textModal: string;
+  openModal: () => void;
+  messageModal: (msg: string) => void;
+  closeModal: () => void;
 }
 
-export const useModal = (): ModalProps => {
-  const [modalRejectOpen, setModalRejectOpen] = useState(false);
+export const useModal = (): modalProps => {
+  /* Creating a state where store the state of modal. */
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const toggleModalSubmitReject = () => {
-    if (!modalApprovedOpen && !modalImageOpen) setModalRejectOpen(!modalRejectOpen);
-  };
+  /* Creating a state where store the message of modal. */
+  const [textModal, setTextModal] = useState("");
 
-  const [modalApprovedOpen, setModalApprovedOpen] = useState(false);
+  /* This function will to set the message of state textModal. */
+  const messageModal = (msg: string) => {
+    setTextModal(msg);
+  }
 
-  const toggleModalSubmitApproved = () => {
-    if (!modalRejectOpen && !modalImageOpen) setModalApprovedOpen(!modalApprovedOpen);
-  };
+  /* 
+  This function will have the responsibility of set the state 
+  modal to true, opening the modal.
+  */
+  const openModal = () => {
+    setModalOpen(true);
+  }
 
-  const [modalImageOpen, setModalImageOpen] = useState(false);
+  /* 
+  This function will have the responsibility of set the state 
+  modal to false, closing the modal.
+  */
+  const closeModal = () => {
+    setModalOpen(false);
+  }
 
-  const toggleModalImage = () => {
-    if (!modalRejectOpen && !modalApprovedOpen) setModalImageOpen(!modalImageOpen);
-  };
+  /* All states and function that we will use. */
+  return {modalOpen, messageModal, textModal, openModal, closeModal}
 
-  return {
-    toggleModalSubmitReject,
-    modalRejectOpen,
-    toggleModalSubmitApproved,
-    modalApprovedOpen,
-    toggleModalImage,
-    modalImageOpen,
-  };
-};
+}
