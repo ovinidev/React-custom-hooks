@@ -27,6 +27,7 @@ Para iniciá-lo, siga os passos abaixo:
 $ yarn
 
 # Iniciar o projeto
+$ cd project
 $ yarn start
 ```
 O app estará disponível no seu browser pelo endereço http://localhost:3000.
