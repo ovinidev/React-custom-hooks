@@ -42,4 +42,4 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com 💜 by [Vinicius](https://github.com/vinimedeiros13) e [João Victor](https://github.com/joaovictornsv) 👋🏻
+Feito com 💜 por [Vinicius](https://github.com/vinimedeiros13) e [João Victor](https://github.com/joaovictornsv) 👋🏻
