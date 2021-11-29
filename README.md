@@ -36,6 +36,18 @@ O app estará disponível no seu browser pelo endereço http://localhost:3000.
 A finalidade deste projeto é a criação de componentes React(hooks, contexts, funções etc.)
 que visem facilitar e automatizar funcionalidades durante o desenvolvimento.
 
+### Componentes desenvolvidos:
+#### Contexts 🌐
+- [Theme Context](./context/ThemeContext.tsx): Auxilia na implementação de temas, como dark e light mode. (Utiliza o hook [usePersistedState](./hooks/usePersistedState.ts))
+
+#### Hooks 🪝
+- [useButton](./hooks/useButton.ts): Fornece funções e states que facilitam gerenciamento do comportamento de botões.
+- [useModal](./hooks/useModal.ts): Disponibiliza funções e states para facilitar o gerenciamento de modais.
+- [usePersistedState](./hooks/usePersistedState.ts): Fornece um state com o tema atual da aplicação (salvo no storage ou não) e uma função para troca de tema.
+- [useStorage](./hooks/useStorage.ts): Retorna funções que facilitam a manipulação do storage do navegador.
+- [useWindowDimensions](./hooks/useWindowDimensions.ts): Retorna as dimensções atuais da tela.
+
+
 <!-- ## 📝 License
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes. -->
