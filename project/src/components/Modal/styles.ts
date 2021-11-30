@@ -14,6 +14,13 @@ export const Container = styled.div<Props>`
 		width: ${width};
 		background: ${background};
 
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
 		position: fixed;
 
 		flex-direction: column;

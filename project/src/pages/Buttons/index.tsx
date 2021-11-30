@@ -1,4 +1,5 @@
 import { Button } from '../../components/Button';
+import { Footer } from '../../components/Footer';
 import { Modal } from '../../components/Modal';
 import { useModal } from '../../hooks/useModal';
 import { Container, Content } from './styles';
@@ -42,6 +43,8 @@ export default function Buttons() {
           onClick={closeModal}
         />
       </Modal>
+
+      <Footer />
     </Container>
   );
 };
