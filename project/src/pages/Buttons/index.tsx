@@ -43,7 +43,6 @@ export default function Buttons() {
           onClick={closeModal}
         />
       </Modal>
-
       <Footer />
     </Container>
   );
